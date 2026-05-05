@@ -1,0 +1,7 @@
+camera_node:
+  ros__parameters:
+    fx: 0.0
+    fy: 0.0
+    cx: 0.0
+    cy: 0.0
+    dist_coeffs: [0.0, 0.0, 0.0, 0.0, 0.0]
