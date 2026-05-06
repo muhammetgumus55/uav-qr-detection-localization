@@ -18,7 +18,7 @@ setup(
     install_requires=['setuptools'],
     zip_safe=True,
     maintainer='Muhammet',
-    maintainer_email='placeholder@example.com',
+    maintainer_email='muhammetgumus5508@gmail.com',
     description='UAV QR code detection and localization package',
     license='Apache-2.0',
     tests_require=['pytest'],

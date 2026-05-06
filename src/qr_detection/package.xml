@@ -4,7 +4,7 @@
   <name>qr_detection</name>
   <version>0.0.1</version>
   <description>UAV QR code detection and localization package</description>
-  <maintainer email="placeholder@example.com">Muhammet</maintainer>
+  <maintainer email="muhammetgumus5508@gmail.com">Muhammet</maintainer>
   <license>Apache-2.0</license>
 
   <exec_depend>rclpy</exec_depend>
@@ -12,6 +12,8 @@
   <exec_depend>geometry_msgs</exec_depend>
   <exec_depend>cv_bridge</exec_depend>
   <exec_depend>std_msgs</exec_depend>
+  <exec_depend>python3-opencv</exec_depend>
+  <exec_depend>python3-numpy</exec_depend>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>

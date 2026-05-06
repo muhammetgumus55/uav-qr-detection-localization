@@ -1,6 +1,6 @@
 import rclpy
-from rclpy.node import Node
 from geometry_msgs.msg import Point
+from rclpy.node import Node
 
 
 class SenderNode(Node):
@@ -10,15 +10,22 @@ class SenderNode(Node):
             Point, 'qr/coordinates', self.coordinate_callback, 10)
 
     def coordinate_callback(self, msg):
-        pass
+        self.get_logger().info(
+            f'Sending QR coordinate: x={msg.x:.3f}, y={msg.y:.3f}, z={msg.z:.3f}'
+        )
+        # TODO: Implement actual transmission (e.g. MAVLink, MAVROS setpoint, serial)
 
 
 def main(args=None):
     rclpy.init(args=args)
     node = SenderNode()
-    rclpy.spin(node)
-    node.destroy_node()
-    rclpy.shutdown()
+    try:
+        rclpy.spin(node)
+    except KeyboardInterrupt:
+        pass
+    finally:
+        node.destroy_node()
+        rclpy.shutdown()
 
 
 if __name__ == '__main__':
